@@ -108,17 +108,17 @@ const Dtable = ({users,handleInput, updateCancelledUser, handleDelete, DeleteSel
 
               <td>
                 {editableRowID === user.id ? ( <>
-                  {/* <button onClick={() => handleSave(user.id)}>save</button> */}
-                  <i class="bi bi-save text-primary mx-2" onClick={() => handleSave(user.id)}/>
-                  {/* <button onClick={handleCancel}>Cancel</button> */}
+                  
+                  <i className="bi bi-save text-primary mx-2" onClick={() => handleSave(user.id)}/>
+        
                   <i className="bi bi-x-circle text-danger" onClick={handleCancel} />
                 </>  
                 ): (
                   
                   <div>
-                    {/* <button onClick={() => handleEdit(user.id)}></button> */}
+                   
                   <i className="bi bi-pencil-square text-primary mx-2" onClick={() => handleEdit(user.id)}></i>
-                  {/* <button onClick={() => handleDelete(user.id)}>Delete</button> */}
+                  
                   <i className="bi bi-trash text-danger" onClick={() => handleDelete(user.id)}></i>
                   </div>
                   

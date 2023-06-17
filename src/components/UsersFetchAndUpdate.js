@@ -3,6 +3,9 @@ import axios from 'axios';
 import Dtable from "./Table";
 import SearchBar from "./searchBar";
 import Pagination from "./pagination";
+
+const API_URL = "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
+
  const UsersFetchAndUpdate = () => {
  const [users, setUsers] = useState([]);
  const [firstRender, setFirstRender] = useState(true);
@@ -13,7 +16,7 @@ import Pagination from "./pagination";
 useEffect(()=> {
   const userDetails= async ()=> {
     try{
-     const response = await axios.get("https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json");
+     const response = await axios.get(API_URL);
      setUsers(response.data);
      setUsersAfterEveryDeletion(response.data);
      setFirstRender(false);
