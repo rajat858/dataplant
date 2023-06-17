@@ -100,7 +100,7 @@ if(firstRender) {
 return (
   <>
   <div className="container mt-5">
-  <SearchBar users = {users} updateUsersFromSearch = {updateUsersFromSearch} usersAfterEveryDeletion = {usersAfterEveryDeletion}/>
+  <SearchBar updateUsersFromSearch = {updateUsersFromSearch} usersAfterEveryDeletion = {usersAfterEveryDeletion}/>
   <Dtable users = {currentUsers}
   handleDelete={handleDelete}
   handleInput={handleInput}
