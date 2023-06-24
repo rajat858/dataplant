@@ -38,6 +38,15 @@ setUsers((users) => {
     }
     return user;
   })})
+
+  setUsersAfterEveryDeletion((users) => {  //to make the edited user searchable by searchbar
+    return users.map((user) => {
+      if (user.id === userid) {
+        return { ...user, [field]: event.target.value};
+      }
+      return user;
+    })
+  })
   
 }
 
