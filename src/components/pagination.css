@@ -1,0 +1,16 @@
+
+.custom-color-front{
+  color: #391e5a;
+}
+
+
+
+
+.pagination .page-item.active .page-link{
+  background-color: #391e5a; /* Set your desired color */
+  border-color: #391e5a;     /* Set your desired color */
+  color: #fff;         
+  outline: none; 
+  border-color: #391e5a; 
+  box-shadow: 0 0 5px #391e5a;           /* Set text color */
+}

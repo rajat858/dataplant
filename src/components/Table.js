@@ -67,13 +67,13 @@ const Dtable = ({users,handleInput, updateCancelledUser, handleDelete, DeleteSel
       
       
       <table className="table table-responsive equal-columns-table">
-        <thead>
+        <thead className="custom-color-light head-border">
           <tr>
             <th className="checkboxAlignLeft"><input className="form-check-input" type="checkbox"  id="parentCheckbox" onChange={(event) => toggleAllCheckbox(event)} checked = {isGlobalChkBoxChecked}/></th>
-            <th>name</th>
-            <th>email</th>
-            <th>role</th>
-            <th>actions</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Subject</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -109,17 +109,17 @@ const Dtable = ({users,handleInput, updateCancelledUser, handleDelete, DeleteSel
               <td>
                 {editableRowID === user.id ? ( <>
                   
-                  <i className="bi bi-save text-primary mx-2" onClick={() => handleSave(user.id)}/>
+                  <i className="bi bi-save mx-2" onClick={() => handleSave(user.id)}/>
         
-                  <i className="bi bi-x-circle text-danger" onClick={handleCancel} />
+                  <i className="bi bi-x-circle custom-color-front" onClick={handleCancel} />
                 </>  
                 ): (
                   
                   <div>
                    
-                  <i className="bi bi-pencil-square text-primary mx-2" onClick={() => handleEdit(user.id)}></i>
+                  <i className="bi bi-pencil-square mx-2" onClick={() => handleEdit(user.id)}></i>
                   
-                  <i className="bi bi-trash text-danger" onClick={() => handleDelete(user.id)}></i>
+                  <i className="bi bi-trash custom-color-front " onClick={() => handleDelete(user.id)}></i>
                   </div>
                   
                 
@@ -132,7 +132,7 @@ const Dtable = ({users,handleInput, updateCancelledUser, handleDelete, DeleteSel
       
     </div>
     <div id = "deleteSelected" >
-        <button className="btn btn-danger " onClick={handleDeleteSelected}>Delete Selected</button>
+        <button className="btn btn-danger custom-color" onClick={handleDeleteSelected}>Delete Selected</button>
         
     </div>
     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./pagination.css";
 const Pagination = ({totalUsers,usersPerPage,currentPage, onPageChange}) => {
 
  // Calculate the total number of pages
@@ -22,7 +22,7 @@ const Pagination = ({totalUsers,usersPerPage,currentPage, onPageChange}) => {
             className="page-link"
             onClick={() => onPageChange(1)}
           >
-            <i className="bi bi-chevron-double-left" />
+            <i className="bi bi-chevron-double-left custom-color-front" />
           </button>
         </li>
       
@@ -33,7 +33,7 @@ const Pagination = ({totalUsers,usersPerPage,currentPage, onPageChange}) => {
             onClick={() => onPageChange(currentPage - 1)}
             disabled = {currentPage === 1}
           >
-            <i className="bi bi-chevron-left" />
+            <i className="bi bi-chevron-left custom-color-front" />
           </button>
         </li>
       
@@ -43,10 +43,10 @@ const Pagination = ({totalUsers,usersPerPage,currentPage, onPageChange}) => {
           key={pageNumber}
           className={`page-item ${
             pageNumber === currentPage ? "active" : ""
-          }`}
+          } custom-color-front`}
         >
           <button
-            className="page-link"
+            className="page-link custom-color-front"
             onClick={() => onPageChange(pageNumber)}
           >
             {pageNumber}
@@ -61,7 +61,7 @@ const Pagination = ({totalUsers,usersPerPage,currentPage, onPageChange}) => {
             onClick={() => onPageChange(currentPage + 1)}
             disabled = {currentPage=== totalPages}
           >
-            <i className="bi bi-chevron-right" />
+            <i className="bi bi-chevron-right custom-color-front" />
           </button>
         </li>
 
@@ -73,7 +73,7 @@ const Pagination = ({totalUsers,usersPerPage,currentPage, onPageChange}) => {
             className="page-link"
             onClick={() => onPageChange(totalPages)}
           >
-            <i className="bi bi-chevron-double-right" />
+            <i className="bi bi-chevron-double-right custom-color-front" />
           </button>
         </li>
       

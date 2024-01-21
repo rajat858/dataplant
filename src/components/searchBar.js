@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import './searchBar.css';
 
 
 const SearchBar = ({ updateUsersFromSearch, usersAfterEveryDeletion}) => {
@@ -34,9 +34,20 @@ const SearchBar = ({ updateUsersFromSearch, usersAfterEveryDeletion}) => {
   
   return (
     <>
-    <div className="input-group mb-3">
-        <input type="text" className="form-control" onChange={handleSearch}  placeholder="Search by name, email or role" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
+    <div className="container">
+      <div className="d-flex justify-content-between align-items-center">
+
+      <div className="input-group custom-input-group ">
+      <input type="text" className="form-control" onChange={handleSearch}  placeholder="Search" aria-label="Default" aria-describedby="inputGroup-sizing-default" />
     </div>
+    <div>
+    <button className="btn btn-danger custom-color"  ><i className="bi bi-plus-circle mx-1"></i>Add</button>
+    </div>
+
+      </div>
+    
+    </div>
+    
     </>
   )
 }

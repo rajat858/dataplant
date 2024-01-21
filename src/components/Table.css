@@ -7,9 +7,48 @@
   width: 33.33%; /* Adjust the width as needed */
 }
 
+
+.head-border{
+  border-bottom-width: 2px;
+}
+
 .checkboxAlignLeft {
   text-align: left;
 }
 #deleteSelected {
   text-align: left;
 }
+
+
+.custom-icon-color{
+  color: black;
+}
+
+.custom-color{
+  background-color: #391e5a;
+  border-color: #391e5a;
+}
+.custom-color:hover{
+  background-color: purple;
+  border-color: #391e5a;
+}
+.custom-color-light{
+  background-color: #391e5a10;
+  border-color: #391e5a10;
+}
+.custom-color-front{
+  color: #3c1e5a;
+}
+
+
+input[type="checkbox"]:active,
+        input[type="checkbox"]:focus {
+            outline: none; 
+            border-color: #391e5a; 
+            box-shadow: 0 0 5px #391e5a; 
+        }
+
+input[type="checkbox"]:checked {
+          background-color: #391e5a; /* Set your desired color for the checked state */
+          border-color: #391e5a; /* Set your desired color for the checked state */
+      }
