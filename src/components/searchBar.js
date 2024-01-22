@@ -3,7 +3,7 @@ import Add from "./add";
 import './searchBar.css';
 
 
-const SearchBar = ({ updateUsersFromSearch, usersAfterEveryDeletion}) => {
+const SearchBar = ({ updateUsersFromSearch, usersAfterEveryDeletion, setUsersAfterEveryDeletion}) => {
    
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -44,7 +44,7 @@ const SearchBar = ({ updateUsersFromSearch, usersAfterEveryDeletion}) => {
     {/* <div>
     <button className="btn btn-danger custom-color"  ><i className="bi bi-plus-circle mx-1"></i>Add</button>
     </div> */}
-      <Add/>
+      <Add addData = {updateUsersFromSearch} Data = {usersAfterEveryDeletion} updateData = {setUsersAfterEveryDeletion}/>
       </div>
     
     </div>

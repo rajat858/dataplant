@@ -16,3 +16,28 @@ h6 {
 .cancel-color {
   background-color: #f3f3f9;
 }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; /* Adjust as needed */
+}
+
+.form-row {
+  display: flex;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.form-label {
+  flex: 1;
+  text-align: left;
+  padding-right: 10px; /* Adjust as needed */
+}
+
+.form-input {
+  flex: 2;
+}
+
+.submit {
+right: 0px;
+margin-right: 3%;
+}
